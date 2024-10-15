@@ -6,7 +6,7 @@
 /*   By: makuryla <makuryla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 18:11:54 by makuryla          #+#    #+#             */
-/*   Updated: 2024/10/15 16:00:41 by makuryla         ###   ########.fr       */
+/*   Updated: 2024/10/15 17:19:22 by makuryla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,5 @@ void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
-
 
 #endif
