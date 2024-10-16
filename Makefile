@@ -6,7 +6,7 @@
 #    By: makuryla <makuryla@student.42angouleme.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/16 16:48:41 by makuryla          #+#    #+#              #
-#    Updated: 2024/10/16 17:41:04 by makuryla         ###   ########.fr        #
+#    Updated: 2024/10/16 18:20:03 by makuryla         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ SRC =	ft_isalnum.c \
 	ft_memmove.c \
 	ft_strlcpy.c \
 	ft_strnstr.c \
+	ft_strlcat.c \
 
 OBJ = $(SRC:.c=.o)
 
