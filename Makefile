@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: makuryla <makuryla@student.42angouleme.    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/10/16 16:48:41 by makuryla          #+#    #+#              #
+#    Updated: 2024/10/16 17:09:20 by makuryla         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 SRC =	ft_isalnum.c \
 	ft_isalpha.c \
 	ft_isascii.c \
@@ -16,6 +28,7 @@ SRC =	ft_isalnum.c \
 	ft_bzero.c \
 	ft_memcpy.c \
 	ft_memmove.c \
+	ft_strlcpy.c \
 
 OBJ = $(SRC:.c=.o)
 
