@@ -6,17 +6,17 @@
 /*   By: makuryla <makuryla@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 18:00:54 by makuryla          #+#    #+#             */
-/*   Updated: 2024/10/16 19:09:27 by makuryla         ###   ########.fr       */
+/*   Updated: 2024/10/17 18:59:38 by makuryla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat (char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t lendest;
-	size_t lensrc;
-	size_t i;
+	size_t	lendest;
+	size_t	lensrc;
+	size_t	i;
 
 	lendest = 0;
 	lensrc = 0;
