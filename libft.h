@@ -6,7 +6,7 @@
 /*   By: makuryla <makuryla@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 18:11:54 by makuryla          #+#    #+#             */
-/*   Updated: 2024/10/17 19:10:02 by makuryla         ###   ########.fr       */
+/*   Updated: 2024/10/18 16:58:53 by makuryla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,9 @@ void	ft_putstr_fd(char *s, int fd);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+void	*ft_memchr(const void *s, int c, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif

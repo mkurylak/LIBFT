@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: makuryla <makuryla@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/13 18:31:24 by makuryla          #+#    #+#             */
-/*   Updated: 2024/10/18 15:46:06 by makuryla         ###   ########.fr       */
+/*   Created: 2024/10/18 14:27:10 by makuryla          #+#    #+#             */
+/*   Updated: 2024/10/18 16:07:37 by makuryla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	char	*res;
-	size_t	count;
+	size_t			i;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
-	if (nmemb == 0 || size == 0)
+	i = 0;
+	str1 = (unsigned char *) s1;
+	str2 = (unsigned char *) s2;
+	while (i < n)
 	{
-		res = malloc(0);
-		return (res);
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
+		i++;
 	}
-	count = (size * nmemb);
-	res = malloc(count);
-	if (!res)
-		return (NULL);
-	while (count > 0)
-	{
-		res[count - 1] = '\0';
-		count--;
-	}
-	return ((void *) res);
+	return (0);
 }

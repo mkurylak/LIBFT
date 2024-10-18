@@ -6,7 +6,7 @@
 /*   By: makuryla <makuryla@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 16:49:16 by makuryla          #+#    #+#             */
-/*   Updated: 2024/10/17 18:58:50 by makuryla         ###   ########.fr       */
+/*   Updated: 2024/10/18 15:49:45 by makuryla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
+	if (!s)
+		return ;
 	while (s[i])
 	{
 		write(fd, &s[i], 1);

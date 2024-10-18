@@ -6,7 +6,7 @@
 /*   By: makuryla <makuryla@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 18:00:54 by makuryla          #+#    #+#             */
-/*   Updated: 2024/10/17 18:59:38 by makuryla         ###   ########.fr       */
+/*   Updated: 2024/10/18 15:58:49 by makuryla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 	lendest = 0;
 	lensrc = 0;
+	if ((!dst || !src) && !size)
+		return (0);
 	while (src[lensrc] || dst[lendest])
 	{
 		lendest = lendest + (dst[lendest] != '\0');

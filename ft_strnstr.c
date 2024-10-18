@@ -6,7 +6,7 @@
 /*   By: makuryla <makuryla@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 17:33:05 by makuryla          #+#    #+#             */
-/*   Updated: 2024/10/17 18:57:49 by makuryla         ###   ########.fr       */
+/*   Updated: 2024/10/18 15:56:22 by makuryla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	i;
 	size_t	j;
 
+	if (!big && !len)
+		return (NULL);
 	if (!*little)
 		return ((char *)big);
 	i = 0;

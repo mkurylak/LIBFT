@@ -6,7 +6,7 @@
 #    By: makuryla <makuryla@student.42angouleme.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/16 16:48:41 by makuryla          #+#    #+#              #
-#    Updated: 2024/10/17 19:10:18 by makuryla         ###   ########.fr        #
+#    Updated: 2024/10/18 16:59:10 by makuryla         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,10 @@ SRC =	ft_isalnum.c \
 	ft_substr.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
+	ft_memchr.c \
+	ft_memcmp.c \
+	ft_striteri.c \
+	ft_strmapi.c \
 
 OBJ = $(SRC:.c=.o)
 
@@ -52,6 +56,10 @@ $(NAME): $(OBJ)
 
 %.o: %.c $(HEADER)
 	cc $(CFLAGS) $< -c -o $@
+
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
+	gcc -nostartfiles -shared -o libft.so $(OBJ)
 
 clean:
 	rm -f $(OBJ)

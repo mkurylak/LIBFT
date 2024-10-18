@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: makuryla <makuryla@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/13 18:31:24 by makuryla          #+#    #+#             */
-/*   Updated: 2024/10/18 15:46:06 by makuryla         ###   ########.fr       */
+/*   Created: 2024/10/18 13:46:42 by makuryla          #+#    #+#             */
+/*   Updated: 2024/10/18 14:11:56 by makuryla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char	*res;
-	size_t	count;
+	unsigned char	*ptr;
+	unsigned char	find;
+	size_t			i;
 
-	if (nmemb == 0 || size == 0)
+	ptr = (unsigned char *)s;
+	find = (unsigned char)c;
+	i = 0;
+	while (n > i)
 	{
-		res = malloc(0);
-		return (res);
+		if (ptr[i] == find)
+			return (ptr + i);
+		i++;
 	}
-	count = (size * nmemb);
-	res = malloc(count);
-	if (!res)
-		return (NULL);
-	while (count > 0)
-	{
-		res[count - 1] = '\0';
-		count--;
-	}
-	return ((void *) res);
+	return (NULL);
 }
