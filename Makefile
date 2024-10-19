@@ -6,7 +6,7 @@
 #    By: makuryla <makuryla@student.42angouleme.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/16 16:48:41 by makuryla          #+#    #+#              #
-#    Updated: 2024/10/18 16:59:10 by makuryla         ###   ########.fr        #
+#    Updated: 2024/10/19 15:43:28 by makuryla         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ SRC =	ft_isalnum.c \
 	ft_memcmp.c \
 	ft_striteri.c \
 	ft_strmapi.c \
+	ft_itoa.c \
 
 OBJ = $(SRC:.c=.o)
 
