@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: makuryla <makuryla@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/17 17:03:44 by makuryla          #+#    #+#             */
-/*   Updated: 2024/10/19 17:35:42 by makuryla         ###   ########.fr       */
+/*   Created: 2024/10/19 16:44:53 by makuryla          #+#    #+#             */
+/*   Updated: 2024/10/19 17:25:02 by makuryla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*res;
-	size_t	i;
+	int		i;
+	int		j;
+	int		len;
+	char	*tab;
 
-	i = 0;
-	if (!s)
+	if (!s1 || !s2)
 		return (NULL);
-	if (start >= ft_strlen(s))
-		return (ft_calloc(1, sizeof(char)));
-	if (len > ft_strlen(s + start))
-		len = ft_strlen(s + start);
-	res = ft_calloc(len + 1, sizeof(char));
-	if (!res)
+	i = -1;
+	j = -1;
+	len = (ft_strlen(s1) + ft_strlen(s2));
+	tab = malloc((len + 1) * sizeof(char));
+	if (!tab)
 		return (NULL);
-	while (i < len)
-	{
-		res[i] = s[i + start];
-		i++;
-	}
-	return (res);
+	while (s1[++i])
+		tab[i] = s1[i];
+	while (s2[++j])
+		tab[i + j] = s2[j];
+	tab[i + j] = '\0';
+	return (tab);
 }
