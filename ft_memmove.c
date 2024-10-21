@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: makuryla <makuryla@student.42.fr>          +#+  +:+       +#+        */
+/*   By: makuryla <makuryla@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:57:57 by makuryla          #+#    #+#             */
-/*   Updated: 2024/10/15 17:19:01 by makuryla         ###   ########.fr       */
+/*   Updated: 2024/10/21 14:02:45 by makuryla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,11 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			d[n] = s[n];
 		}
 	}
-	else
+	while (n--)
 	{
-		while (n--)
-		{
-			*d = *s;
-			d++;
-			s++;
-		}
+		*d = *s;
+		d++;
+		s++;
 	}
 	return (dest);
 }

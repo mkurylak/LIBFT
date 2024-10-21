@@ -6,7 +6,7 @@
 /*   By: makuryla <makuryla@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 13:46:42 by makuryla          #+#    #+#             */
-/*   Updated: 2024/10/18 14:11:56 by makuryla         ###   ########.fr       */
+/*   Updated: 2024/10/21 13:45:08 by makuryla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (n > i)
 	{
 		if (ptr[i] == find)
-			return (ptr + i);
+			return (&ptr[i]);
 		i++;
 	}
 	return (NULL);

@@ -6,7 +6,7 @@
 /*   By: makuryla <makuryla@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 18:31:24 by makuryla          #+#    #+#             */
-/*   Updated: 2024/10/18 15:46:06 by makuryla         ###   ########.fr       */
+/*   Updated: 2024/10/21 13:36:38 by makuryla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		return (res);
 	}
 	count = (size * nmemb);
-	res = malloc(count);
+	res = malloc(sizeof(char) * count);
 	if (!res)
 		return (NULL);
 	while (count > 0)
