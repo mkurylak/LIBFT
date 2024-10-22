@@ -6,7 +6,7 @@
 /*   By: makuryla <makuryla@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 11:55:22 by makuryla          #+#    #+#             */
-/*   Updated: 2024/10/22 13:39:44 by makuryla         ###   ########.fr       */
+/*   Updated: 2024/10/22 13:44:43 by makuryla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static	int	ft_countwords(const char *str, char sep)
 
 static int	ft_fill_tab(char **tab, const char *s, char sep)
 {
-	int			i;
+	long int	i;
 	const char	*start;
 
 	i = 0;
